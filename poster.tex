@@ -30,7 +30,6 @@ scale=1.4,debug]{beamerposter}
 \graphicspath{{./figs/}}
 
 \newcommand{\blocktitle}[1]{{\Large \textbf{#1}}}
-
 \renewcommand\mathfamilydefault{cmr}
 
 \newcommand{\GeV}{\,{\rm GeV}}
@@ -150,7 +149,7 @@ scale=1.4,debug]{beamerposter}
     \blocktitle{Background}
     \begin{itemize}
         \item First detection of SGWB by NANOGrav collaboration in 2023 \cite{Agazie:2023}
-        \item Most popular explanation is astrophysical: inspiraling supermassive black hole binaries (SBHBs) emitting low-frequency GWs \cite{Burke-Spolaor:2018bvk}.
+        \item Most popular explanation is astrophysical: inspiraling supermassive black hole binaries (SMBHBs) emitting low-frequency GWs \cite{Burke-Spolaor:2018bvk}.
         \item More exotic explanations lie in cosmological sources: cosmic strings, domain walls, first-order phase transitions, primordial magnetic fields, primordial GWs, scalar-induced GWs, etc \cite{Afzal:2023}.  
         \item We explore the explanation of primordial GWs generated during inflation, amplified by massive gravity.
     \end{itemize}
@@ -189,7 +188,7 @@ scale=1.4,debug]{beamerposter}
       \begin{column}{0.48\textwidth}
         \begin{figure}[t]
           \centering
-          \includegraphics[width=\linewidth]{fig0-cropped.pdf} 
+          \includegraphics[width=\linewidth]{fig1.pdf} 
           \label{fig:mode}
         \end{figure}
       \end{column}
@@ -235,6 +234,7 @@ scale=1.4,debug]{beamerposter}
   
     \begin{tcolorbox}
     \blocktitle{Results}
+    
     Our values for the parameters are 
     \begin{itemize}
         \item $M_{\text{GW}} = 1.298H_{\inf}$, $H_{\inf} =  1.7 \GeV$ to stay within $1\sigma$ (\textcolor{red}{red} curve)
@@ -247,9 +247,8 @@ scale=1.4,debug]{beamerposter}
    \vspace{-0cm}
      \begin{figure}[t]
         \centering
-          \includegraphics[width=.9\linewidth]{fig5-cropped.pdf} 
-
-          \label{fig:contours}
+          \includegraphics[width=.89\linewidth]{fig5.pdf} 
+          \label{fig:gwb}
         \end{figure}
   \end{tcolorbox}
   
@@ -268,7 +267,7 @@ scale=1.4,debug]{beamerposter}
 \blocktitle{Conclusions}
     \begin{itemize}
         \item Time-dependent MTMG successfully reproduces NG15
-        \item Certain values of the parameters produce $\Omega_{\text{GW}}$ that violate BBN bound, for $f \gtrsim 10^{-6}$ Hz.
+        \item BBN bound is violated for $f \gtrsim 10^{-6}$ Hz.
         \item Suppression mechanism, analogous to the damping of the energy density from the free-streaming neutrinos \cite{Durrer:1997ta}, could be introduced
         \item More complicated functions for $M_{\text{GW}}(t)$ are possible; future work can try to place constraints on the time evolution of the mass
         \item Further observations that place constraints on $H_{\text{inf}}, a_r, \tau_r$ would be able to constrain the parameters of this theory
@@ -276,12 +275,16 @@ scale=1.4,debug]{beamerposter}
   \end{tcolorbox}
 
 \begin{tcolorbox}
-    \blocktitle{Source Code} The NANOGrav 15-Year data is available at \href{https://nanograv.org/science/data}{NANOGrav}, source code to reproduce all of the figures is available in our main \href{https://github.com/ChrisChoi314/constrain_mass_nanograv_15}{GitHub repository}, the TeX source for our paper \cite{Choi:2023tun} is available \href{https://github.com/ChrisChoi314/constraining_NANOGrav_paper}{here}, and the Tex source for this poster is available \href{https://github.com/ChrisChoi314/mg_poster_aas243}{here}. 
+    \blocktitle{Source Code} 
+    
+    The NANOGrav 15-Year data is available at \href{https://nanograv.org/science/data}{nanograv.org/science/data}, source code to reproduce all of the figures in our paper \cite{Choi:2023tun} is available at \href{https://github.com/ChrisChoi314/constrain_mass_nanograv_15}{github.com/ChrisChoi314/constrain\_mass\_nanograv\_15} and the TeX for this poster is at \href{https://github.com/ChrisChoi314/mg_poster_aas243}{github.com/ChrisChoi314/mg\_poster\_aas243}. 
     
   \end{tcolorbox}
   
   \begin{tcolorbox}
-    \blocktitle{Acknowledgements} We thank Sachiko Kuroyanagi and Shinji Mukohyama for helpful discussions related to \cite{Fujita:2018ehq}, Axel Brandenburg, Neil J.\ Cornish, and Arthur B.\ Kosowsky for comments, Emma Clarke, Jeffrey S.\ Hazboun, and William G.\ Lamb for help with plotting NG15, Sayan Mandal for interpretation, the organizers and participants of the workshop ``Unravelling the Universe with Pulsar Timing Arrays", and Stephen Huan for the template for this poster. TK and MG acknowledge partial support from the NASA ATP Award 80NSSC22K0825.
+    \blocktitle{Acknowledgements}
+    
+    We thank Sachiko Kuroyanagi \& Shinji Mukohyama for helpful discussions related to \cite{Fujita:2018ehq}, Axel Brandenburg, Neil J.\ Cornish, Arthur B.\ Kosowsky, \& Sayan Mandal for comments, Emma Clarke, Jeffrey S.\ Hazboun, \& William G.\ Lamb for help with plotting NG15, the organizers \& participants of the workshop \href{https://indico.cern.ch/event/1314635/overview}{``Unravelling the Universe with Pulsar Timing Arrays"}, \& Stephen Huan for the template for this poster. TK \& MG acknowledge partial support from the NASA ATP Award 80NSSC22K0825.
   \end{tcolorbox}
 
   \begin{tcolorbox}

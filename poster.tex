@@ -59,12 +59,11 @@ scale=1.4,debug]{beamerposter}
 \colorlet{targetcolor}{orange}
 \colorlet{selcolor}{seagreen}
 \colorlet{candcolor}{lightblue}
-
 \hypersetup{
   colorlinks=true,
   linkcolor=darkrust,
   citecolor=darkseagreen,
-  urlcolor=darksilver
+  urlcolor=seagreen
 }
 
 \pgfplotsset{
@@ -120,8 +119,8 @@ scale=1.4,debug]{beamerposter}
 
 % QR code in top right
 \begin{tikzpicture}[overlay,remember picture]
-  \node[below left=1.27cm and -64cm] at (current page.north east) {
-      \includegraphics[width=.7\columnwidth]{qr_paper.png}
+  \node[below left=1.27cm and 1.27cm] at (current page.north east) {
+      \includesvg[width=0.11\columnwidth]{qr-code}
     };
 \end{tikzpicture}
 
@@ -139,7 +138,6 @@ scale=1.4,debug]{beamerposter}
 \begin{column}{0.30\textwidth}
   \begin{tcolorbox}
     \blocktitle{Abstract}
-
     \begin{itemize}
         \item Convincing evidence of a stochastic gravitational wave background (SGWB) has been found by the NANOGrav 15-year data set (NG15). 
         \item We evaluate the possibility of its source being from the early universe through the tensor perturbations induced by massive gravity (MG). 
@@ -152,9 +150,9 @@ scale=1.4,debug]{beamerposter}
     \blocktitle{Background}
     \begin{itemize}
         \item First detection of SGWB by NANOGrav collaboration in 2023 \cite{Agazie:2023}
-        \item Most popular explanation is astrophysical: inspiraling supermassive black hole binaries (SBHBs) emitting low-frequency GWs \cite{Burke-Spolaor:2018bvk}
-        \item More exotic explanations lie in cosmological sources of SGWB, like cosmic strings, domain walls, first-order phase transitions, primordial GWs, etc. 
-        \item We explore the explanation of primordial GWs generated during inflation, amplified by massive gravity 
+        \item Most popular explanation is astrophysical: inspiraling supermassive black hole binaries (SBHBs) emitting low-frequency GWs \cite{Burke-Spolaor:2018bvk}.
+        \item More exotic explanations lie in cosmological sources: cosmic strings, domain walls, first-order phase transitions, primordial magnetic fields, primordial GWs, scalar-induced GWs, etc \cite{Afzal:2023}.  
+        \item We explore the explanation of primordial GWs generated during inflation, amplified by massive gravity.
     \end{itemize}
     \begin{figure}[t]
       \centering
@@ -166,12 +164,17 @@ scale=1.4,debug]{beamerposter}
   \begin{tcolorbox}
     \blocktitle{Massive Gravity}
     \vspace{0.25\baselineskip}
-
     \begin{columns}
       \hfill
       \begin{column}{0.5\textwidth}
-    We consider model of MTMG \cite{DeFelice:2015hla} where mass of graviton is step-function of time \cite{Fujita:2018ehq}.  $$\bar{h}_k'' + \left(k^2 + a^2 M_\text{GW}^2 - \frac{a''}{a}\right)\bar{h}_k = 0 $$  
-    is our equation of motion for the two tensor modes, and $a, M_{\text{GW}}$ are    
+      \begin{itemize}
+          \item  We consider model of MTMG \cite{DeFelice:2015hla} where graviton mass $M_{\text{GW}}$ is step-function of time \cite{Fujita:2018ehq}
+          \item Equation of motion for the two tensor modes:
+      \end{itemize} 
+      $$\bar{h}_k'' + \left(k^2 + a^2 M_\text{GW}^2 - \frac{a''}{a}\right)\bar{h}_k = 0 $$  
+    \begin{itemize}
+        \item Scale factor $a$ and graviton mass are defined as follows:
+    \end{itemize}
         $$a(\tau) = 
     \begin{cases}
         -1/(H_{\inf}\tau) & \tau < \tau_r \\
@@ -213,7 +216,7 @@ scale=1.4,debug]{beamerposter}
     $$\Omega_\text{GW} = \frac{1}{\rho_c}\frac{d \rho_\text{GW}} {d \log{k}}$$
 
     \begin{itemize}
-        \item $\Omega_{\text{GW}}$ is blue tilted / amplified from the GR case in massive gravity:
+        \item In massive gravity, $\Omega_{\text{GW}}$ is blue tilted / amplified:
     \end{itemize}
     $$\Omega_{\text{GW},0}(f) = \frac{\pi^2f^2}{3a_0^2 H_0^2}\frac{\tau_m}{\tau_r}(k\tau_r)^{3-2\nu}\mathcal{P}_{\text{GR}}(k)$$
     \begin{itemize}
@@ -240,7 +243,7 @@ scale=1.4,debug]{beamerposter}
         \item \textcolor{purple}{purple} curve -- partially produces the signal for large $\Omega_{\text{GW}}$ and $f$
         \item \textcolor{orange}{golden} curve -- partially produces the signal for small $\Omega_{\text{GW}}$ and $f$
     \end{itemize}
-   Respecting CMB, BBN bounds while reproducing the signal is mutually exclusive. If we don't respect them, we achieve good agreement with signal with a caveat: $\tau_m$ is too deep into the matter dominated era.
+   Respecting CMB, BBN bounds and reproducing the signal are mutually exclusive. If we don't respect them, we achieve good agreement with signal with a caveat: $\tau_m$ is too deep into the matter dominated era.
    \vspace{-0cm}
      \begin{figure}[t]
         \centering
@@ -264,18 +267,21 @@ scale=1.4,debug]{beamerposter}
 \begin{tcolorbox}
 \blocktitle{Conclusions}
     \begin{itemize}
-        \item Time-dependent step function mass model of MG successfully reproduced NG15
+        \item Time-dependent MTMG successfully reproduces NG15
         \item Certain values of the parameters produce $\Omega_{\text{GW}}$ that violate BBN bound, for $f \gtrsim 10^{-6}$ Hz.
         \item Suppression mechanism, analogous to the damping of the energy density from the free-streaming neutrinos \cite{Durrer:1997ta}, could be introduced
-        \item More complicated functions for $M_{\text{GW}}(t)$ are possible; future work can try to place constraints on the evolution of the mass during phase transition
+        \item More complicated functions for $M_{\text{GW}}(t)$ are possible; future work can try to place constraints on the time evolution of the mass
         \item Further observations that place constraints on $H_{\text{inf}}, a_r, \tau_r$ would be able to constrain the parameters of this theory
     \end{itemize}
   \end{tcolorbox}
+
+\begin{tcolorbox}
+    \blocktitle{Source Code} The NANOGrav 15-Year data is available at \href{https://nanograv.org/science/data}{NANOGrav}, source code to reproduce all of the figures is available in our main \href{https://github.com/ChrisChoi314/constrain_mass_nanograv_15}{GitHub repository}, the TeX source for our paper \cite{Choi:2023tun} is available \href{https://github.com/ChrisChoi314/constraining_NANOGrav_paper}{here}, and the Tex source for this poster is available \href{https://github.com/ChrisChoi314/mg_poster_aas243}{here}. 
+    
+  \end{tcolorbox}
   
   \begin{tcolorbox}
-    \blocktitle{Acknowledgements}
-    
-    We thank Sachiko Kuroyanagi and Shinji Mukohyama for helpful discussions related to the theoretical foundation of SFM, \cite{Fujita:2018ehq} We appreciate discussions from Axel Brandenburg, Neil J.\ Cornish, and Arthur B.\ Kosowsky. We thank Emma Clarke, Jeffrey S.\ Hazboun, and William G.\ Lamb for their help with plotting NG15, and Sayan Mandal for interpreting our results. We thank the organizers and participants of the PITT PACC workshop ``Unravelling the Universe with Pulsar Timing Arrays Workshop" during which the paper has been finalized. TK and MG acknowledge partial support from the NASA Astrophysics Theory Program (ATP) Award 80NSSC22K0825.
+    \blocktitle{Acknowledgements} We thank Sachiko Kuroyanagi and Shinji Mukohyama for helpful discussions related to \cite{Fujita:2018ehq}, Axel Brandenburg, Neil J.\ Cornish, and Arthur B.\ Kosowsky for comments, Emma Clarke, Jeffrey S.\ Hazboun, and William G.\ Lamb for help with plotting NG15, Sayan Mandal for interpretation, the organizers and participants of the workshop ``Unravelling the Universe with Pulsar Timing Arrays", and Stephen Huan for the template for this poster. TK and MG acknowledge partial support from the NASA ATP Award 80NSSC22K0825.
   \end{tcolorbox}
 
   \begin{tcolorbox}
